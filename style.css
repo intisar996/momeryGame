@@ -279,3 +279,49 @@ body {
   align-items: center;
   margin-top: 324px;
 }
+.container {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.control-button {
+  /* Existing styles */
+}
+
+.cont {
+  /* Existing styles */
+}
+
+.memory-game-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.game-block {
+  /* Adjust the game block styles as needed */
+}
+
+@media (max-width: 767px) {
+  .memory-game-blocks {
+    margin-top: 198px;
+    margin-left: 46px;
+    grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
+    gap: 10px;
+  }
+  .button {
+    width: 362px;
+    height: 121px;
+    top: 409px;
+  }
+  .button .text {
+    font-size: 46px;
+  }
+}
