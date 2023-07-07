@@ -311,8 +311,9 @@ body {
 
 @media (max-width: 767px) {
   .memory-game-blocks {
-    margin-top: 198px;
-    margin-left: 46px;
+    margin-top: 30%;
+    margin-left: 11%;
+    margin-right: 11%;
     grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
     gap: 10px;
   }
@@ -323,5 +324,12 @@ body {
   }
   .button .text {
     font-size: 46px;
+  }
+  .memory-game-blocks .game-block {
+    height: 235px;
+  }
+  .info-container {
+    width: 76%;
+    font-size: 42px;
   }
 }
