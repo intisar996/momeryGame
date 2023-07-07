@@ -311,7 +311,7 @@ body {
 
 @media (max-width: 767px) {
   .memory-game-blocks {
-    margin-top: 30%;
+    margin-top: 20%;
     margin-left: 11%;
     margin-right: 11%;
     grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
