@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="control-button">
+        <section class="section">
+            <a class="button button--B" href="#">
+                <div class="glow_back"></div>
+                <div class="glow_front"></div>
+                <div class="twinkle_white"></div>
+                <div class="twinkle_color"></div>
+                <div class="reflection_top"></div>
+                <div class="reflection_bottom"></div>
+                <div class="shine"></div>
+                <div class="shine_shadow_R"></div>
+                <span class="text">Start</span>
+            </a>
+        </section>
+    </div>
+    <div class="cont">
+        <div class="info-container">
+            <div class="name">
+                Hello <span></span>
+            </div>
+            <div class="tries">
+                Wrong Tries: <span>0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="memory-game-blocks">
+        <div class="game-block" data-animals="cat">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon1.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="cat">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon1.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="deer">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon2.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="deer">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon2.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="elephant">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon8.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="elephant">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon8.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="lion">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon3.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="lion">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon3.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="wolf">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon4.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="wolf">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon4.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="discus">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon5.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="discus">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon5.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="european">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon6.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="european">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon6.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="lamb">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon7.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-animals="lamb">
+            <div class="face fornt"></div>
+            <div class="face back">
+                <img src="img/pokmon7.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <audio src="img/videoplayback (4).mp3" preload="auto" id="success"></audio>
+    <audio src="img/videoplayback (6).mp3" preload="auto" id="fail"></audio>
+
+
+    <video width="320" height="240" class="fails" id="fails" preload="auto" controls>
+        <source src="img/Team Rocket's Evil Laugh - Ready, Willing & Sableye (2).mp4" type="video/mp4">
+    </video>
+
+    <div class="fail-button">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </div>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

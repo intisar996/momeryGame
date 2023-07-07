@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+.control-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(255, 247, 183, 0.9);
+}
+
+.cont {
+  width: 1080px;
+  margin: 20px auto 0;
+  display: flex;
+}
+.info-container {
+  width: 587px;
+  margin: 20px auto 14px;
+  background-color: #ffe8e8;
+  padding: 22px;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: 500;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.info-container .name,
+.info-container .names {
+  float: left;
+  width: 50%;
+}
+.info-container .tries {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.memory-game-blocks {
+  display: flex;
+  width: 1000px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.memory-game-blocks.no-clicking {
+  pointer-events: none;
+}
+
+.memory-game-blocks .game-block {
+  height: 160px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  flex: 1 0 200px;
+  margin: 0 10px 20px;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.memory-game-blocks .game-block .fornt {
+  background-image: url(./img/pokeball.avif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 160px;
+}
+
+.memory-game-blocks .game-block .back {
+  background-color: #8b6066;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.memory-game-blocks .game-block .back img {
+  width: 100%;
+  height: 100%;
+}
+.memory-game-blocks .game-block .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  border: 5px solid #7c3939;
+  -webkit-backface-visibility: hidden;
+}
+
+.memory-game-blocks .game-block.is-flipped,
+.memory-game-blocks .game-block.has-match {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.fail-button.End {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(3, 169, 244, 0.9);
+}
+.fails {
+  visibility: hidden;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  width: 240px;
+  height: 80px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  border: solid 1px #fff;
+  text-decoration: none;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 40px;
+  transition: all ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -ms-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
+}
+
+.button::after {
+  mix-blend-mode: multiply;
+}
+
+.button .twinkle_white {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 210px;
+  height: 58px;
+  transition: all ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -ms-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+}
+
+.button .shine_shadow_R::before,
+.button .shine_shadow_L::before {
+  transform: rotate(49deg);
+  -webkit-transform: rotate(49deg);
+  -moz-transform: rotate(49deg);
+  -ms-transform: rotate(49deg);
+  -o-transform: rotate(49deg);
+}
+
+.button .shine_shadow_R::after,
+.button .shine_shadow_L::after {
+  transform: rotate(-49deg);
+  -webkit-transform: rotate(-49deg);
+  -moz-transform: rotate(-49deg);
+  -ms-transform: rotate(-49deg);
+  -o-transform: rotate(-49deg);
+}
+
+.button .shine_shadow_R {
+  right: 37px;
+}
+
+.button .shine_shadow_L {
+  left: 37px;
+}
+
+.button .text {
+  position: relative;
+  z-index: 11;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all ease 0.8s;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -ms-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+}
+
+.button--B::before {
+  background: #f92323;
+}
+
+.button--B::after {
+  background: linear-gradient(0deg, rgba(50, 50, 50, 0), rgb(50, 50, 50));
+}
+
+.button--B .shine::before {
+  display: none;
+}
+
+.button--B .glow_back {
+  background: #a37db8;
+}
+
+.button--B .shine_shadow_R {
+  box-shadow: 0 0 5px #f92323;
+}
+
+.button--B .shine_shadow_R::before,
+.button--B .shine_shadow_R::after {
+  box-shadow: 0 0 5px #f92323;
+}
+
+.button:hover .shine::before,
+.button:hover .shine:after {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.button:hover .shine_shadow_R {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.button:hover .text {
+  letter-spacing: 4px;
+}
+
+.button--B:hover::before {
+  background: #ff4b4b;
+}
+
+.button--B:hover .glow_back {
+  background: #ffffff;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 324px;
+}
