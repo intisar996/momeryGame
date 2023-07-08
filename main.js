@@ -88,7 +88,7 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
 
   } else {
     triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
-    if (triesElement.innerHTML <= 8) {
+    if (triesElement.innerHTML <= 11) {
       setTimeout(() => {
         firstBlock.classList.remove('is-flipped');
         secondBlock.classList.remove('is-flipped');
