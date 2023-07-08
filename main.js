@@ -2,7 +2,7 @@
 // Select The Start Game Button
 document.querySelector(".control-button span").onclick = function () {
   // Prompt Window To Ask For Name
-  let yourName = prompt("What  Your Name?");
+  let yourName = prompt("What is Your Name?");
 
   // If Name Is Empty
   if (yourName == null || yourName == "") {
@@ -88,7 +88,7 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
 
   } else {
     triesElement.innerHTML = parseInt(triesElement.innerHTML) + 1;
-    if (triesElement.innerHTML <= 4) {
+    if (triesElement.innerHTML <= 8) {
       setTimeout(() => {
         firstBlock.classList.remove('is-flipped');
         secondBlock.classList.remove('is-flipped');
